@@ -1,0 +1,10 @@
+sample_id,Actual,Predicted
+HCC827_DMSO_1,DMSO,DMSO
+HCC827_DMSO_2,DMSO,DMSO
+HCC827_DMSO_3,DMSO,DMSO
+HCC827_osi_DTP_1,osi_DTP,osi_DTP
+HCC827_osi_DTP_2,osi_DTP,osi_DTP
+HCC827_osi_DTP_3,osi_DTP,osi_DTP
+HCC827_osi_acute_1,osi_acute,osi_acute
+HCC827_osi_acute_2,osi_acute,osi_acute
+HCC827_osi_acute_3,osi_acute,osi_acute
