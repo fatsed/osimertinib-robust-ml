@@ -8,6 +8,8 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.metrics import confusion_matrix
+from sklearn.svm import LinearSVC
+from sklearn.neighbors import NearestCentroid
 
 # Load dataset
 project_dir = Path(__file__).resolve().parents[1]
@@ -152,6 +154,49 @@ for fold, (train_idx, test_idx) in enumerate(
     )
 
     print("Predictions saved:", output_path)
+
+    
+    # Compare additional baseline models
+    comparison_models = {
+        "Linear SVM": LinearSVC(
+            C=1.0,
+            max_iter=10000,
+            random_state=42
+        ),
+        "Nearest Centroid": NearestCentroid()
+    }
+
+    print("\nAdditional baseline comparison:")
+
+    for model_name, classifier in comparison_models.items():
+        comparison_pipeline = make_pipeline(
+            VarianceThreshold(),
+            StandardScaler(),
+            PCA(n_components=5, random_state=42),
+            classifier
+        )
+
+        comparison_pipeline.fit(X_train, y_train)
+
+        comparison_pred = comparison_pipeline.predict(X_test)
+
+        comparison_accuracy = accuracy_score(
+            y_test, comparison_pred
+        )
+
+        comparison_f1 = f1_score(
+            y_test,
+            comparison_pred,
+            average="macro",
+            zero_division=0
+        )
+
+        print(
+            f"{model_name}: "
+            f"Accuracy={comparison_accuracy:.3f}, "
+            f"Macro F1={comparison_f1:.3f}"
+        )
+
 
 
 
