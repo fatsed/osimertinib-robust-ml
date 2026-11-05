@@ -4,6 +4,8 @@ import gzip
 import math
 from collections import Counter
 from pathlib import Path
+import tarfile
+import pandas as pd
 
 # File paths
 project_dir = Path(__file__).resolve().parents[1]
@@ -103,3 +105,147 @@ print("\nDuplicate check:")
 print("Unique gene IDs:", len(gene_counts))
 print("Duplicated gene IDs:", duplicate_genes)
 print("Duplicated sample names:", duplicate_samples)
+
+# Dataset 2: GSE255958
+
+second_archive_path = (
+    project_dir / "data" / "raw" / "GSE255958_RAW.tar"
+)
+
+if not second_archive_path.is_file():
+    raise FileNotFoundError(
+        f"Dataset not found: {second_archive_path}"
+    )
+
+with tarfile.open(second_archive_path, "r") as archive:
+    pc9_members = sorted(
+        [
+            member
+            for member in archive.getmembers()
+            if member.isfile()
+            and "_PC9_" in member.name
+            and member.name.endswith(".genes.results.gz")
+        ],
+        key=lambda member: member.name
+    )
+
+    print("\nDataset 2: GSE255958")
+    print("Total files:", len(archive.getmembers()))
+    print("PC9 samples:", len(pc9_members))
+
+    print("\nPC9 filenames:")
+    for member in pc9_members:
+        print(member.name)
+
+    if not pc9_members:
+        raise ValueError("No PC9 expression files found.")
+
+    # Inspect the first PC9 sample
+    sample_member = pc9_members[0]
+    sample_stream = archive.extractfile(sample_member)
+
+    if sample_stream is None:
+        raise ValueError("Cannot read sample file.")
+
+    with sample_stream:
+        with gzip.GzipFile(fileobj=sample_stream) as gz:
+            sample_df = pd.read_csv(
+                gz,
+                sep="\t",
+                nrows=5
+            )
+
+    print("\nSample:", sample_member.name)
+    print("\nColumns:")
+    print(sample_df.columns.tolist())
+
+    print("\nFirst five gene records:")
+    print(sample_df.to_string(index=False))
+
+
+# Compare gene identifiers between two datasets
+
+with tarfile.open(second_archive_path, "r") as archive:
+    sample_name = (
+        "GSM8083374_PC9_D_1.genes.results.gz"
+    )
+    sample_stream = archive.extractfile(sample_name)
+    with gzip.GzipFile(fileobj=sample_stream) as gz:
+        genes_df = pd.read_csv(
+            gz,
+            sep="\t",
+            usecols=["gene_id", "TPM"]
+        )
+
+# Inspect possible gene symbol conversion
+original_ids = genes_df["gene_id"].astype(str)
+candidate_symbols = original_ids.str.split(
+    "_", n=1
+).str[0]
+
+first_dataset_genes = set(gene_counts.keys())
+
+direct_overlap = len(
+    set(original_ids) & first_dataset_genes
+)
+
+candidate_overlap = len(
+    set(candidate_symbols) & first_dataset_genes
+)
+
+print("\nGene identifier comparison:")
+print("Dataset 2 gene rows:", len(genes_df))
+print("Direct overlap:", direct_overlap)
+print("Candidate symbol overlap:", candidate_overlap)
+print("Candidate duplicate genes:", candidate_symbols.duplicated().sum())
+
+print("\nExample gene identifiers:")
+print(pd.DataFrame({
+    "Original": original_ids.head(5).values,
+    "Candidate": candidate_symbols.head(5).values
+}))
+
+
+# Validate gene identifier conversion
+import re
+
+def extract_gene_symbol(gene_id):
+    match = re.fullmatch(r"(.+)_\1", gene_id)
+    if match:
+        return match.group(1)
+    return None
+
+validated_symbols = original_ids.map(extract_gene_symbol)
+
+audit_df = pd.DataFrame({
+    "gene_id": original_ids,
+    "symbol": validated_symbols
+})
+
+print("\nGene mapping validation:")
+print(
+    "Validated identifiers:",
+    validated_symbols.notna().sum()
+)
+print(
+    "Unrecognized identifiers:",
+    validated_symbols.isna().sum()
+)
+print(
+    "Validated gene overlap:",
+    len(set(validated_symbols.dropna()) & first_dataset_genes)
+)
+
+duplicates = audit_df[
+    audit_df["symbol"].notna()
+    & audit_df["symbol"].duplicated(keep=False)
+]
+
+print("\nDuplicated gene symbols:")
+print(duplicates.to_string(index=False))
+print("\nUnrecognized examples:")
+print(
+    audit_df[audit_df["symbol"].isna()]
+    .head(10)
+    .to_string(index=False)
+)
