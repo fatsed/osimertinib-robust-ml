@@ -1,0 +1,19 @@
+method,sample_id,actual,predicted
+Rank + PCA,P1,DMSO,osi_DTP
+Rank + PCA,P2,DMSO,osi_DTP
+Rank + PCA,P3,DMSO,osi_DTP
+Rank + PCA,D1,osi_DTP,osi_DTP
+Rank + PCA,D2,osi_DTP,osi_DTP
+Rank + PCA,D3,osi_DTP,osi_DTP
+Pooled Effect,P1,DMSO,DMSO
+Pooled Effect,P2,DMSO,DMSO
+Pooled Effect,P3,DMSO,DMSO
+Pooled Effect,D1,osi_DTP,osi_DTP
+Pooled Effect,D2,osi_DTP,osi_DTP
+Pooled Effect,D3,osi_DTP,osi_DTP
+Stable Signature,P1,DMSO,DMSO
+Stable Signature,P2,DMSO,DMSO
+Stable Signature,P3,DMSO,DMSO
+Stable Signature,D1,osi_DTP,osi_DTP
+Stable Signature,D2,osi_DTP,osi_DTP
+Stable Signature,D3,osi_DTP,osi_DTP

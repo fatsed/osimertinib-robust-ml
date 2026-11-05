@@ -1,0 +1,10 @@
+test_study,method,n_test,accuracy,macro_f1,dtp_recall
+GSE193258,Rank + PCA,24,0.9583333333333334,0.9582608695652174,0.9166666666666666
+GSE193258,Pooled Effect,24,1.0,1.0,1.0
+GSE193258,Stable Signature,24,1.0,1.0,1.0
+GSE249721,Rank + PCA,6,1.0,1.0,1.0
+GSE249721,Pooled Effect,6,1.0,1.0,1.0
+GSE249721,Stable Signature,6,1.0,1.0,1.0
+GSE255958,Rank + PCA,6,1.0,1.0,1.0
+GSE255958,Pooled Effect,6,1.0,1.0,1.0
+GSE255958,Stable Signature,6,1.0,1.0,1.0

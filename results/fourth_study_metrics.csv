@@ -1,0 +1,4 @@
+method,n_genes,accuracy,macro_f1
+Rank + PCA,18318,0.5,0.3333333333333333
+Pooled Effect,50,1.0,1.0
+Stable Signature,50,1.0,1.0
