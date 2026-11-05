@@ -1,0 +1,9 @@
+method,test_cell_line,accuracy,macro_f1
+Raw Expression,H1975,1.0,1.0
+Raw Expression,HCC2935,1.0,1.0
+Raw Expression,HCC827,1.0,1.0
+Raw Expression,PC9,1.0,1.0
+Sample Rank,H1975,1.0,1.0
+Sample Rank,HCC2935,1.0,1.0
+Sample Rank,HCC827,1.0,1.0
+Sample Rank,PC9,1.0,1.0

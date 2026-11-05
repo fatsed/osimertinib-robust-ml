@@ -249,3 +249,82 @@ print(
     .head(10)
     .to_string(index=False)
 )
+
+# Dataset 3: GSE249721
+
+third_dataset_path = (
+    project_dir
+    / "data"
+    / "raw"
+    / "GSE249721_all_samples_processed_data.tsv.gz"
+)
+
+if not third_dataset_path.is_file():
+    raise FileNotFoundError(
+        f"Dataset not found: {third_dataset_path}"
+    )
+
+print("\nDataset 3: GSE249721")
+
+with gzip.open(third_dataset_path, "rt") as file:
+    for i in range(4):
+        line = file.readline()
+
+        if not line:
+            break
+
+        values = line.rstrip("\n").split("\t")
+
+        print(f"\nRow {i + 1}:")
+        print("Number of columns:", len(values))
+        print("First 12 values:", values[:12])
+
+
+# Dataset 3: HCC827 sample and expression audit
+
+third_df = pd.read_csv(
+    third_dataset_path,
+    sep="\t"
+)
+
+hcc827_columns = [
+    col for col in third_df.columns
+    if "HCC827" in col.upper()
+]
+
+print("\nHCC827 sample columns:")
+for col in hcc827_columns:
+    print(col)
+
+print("\nNumber of HCC827 samples:", len(hcc827_columns))
+
+# Extract symbols from Ensembl ID + gene symbol
+third_ids = third_df.iloc[:, 0].astype(str)
+
+third_symbols = third_ids.str.extract(
+    r"^ENSG\d+(?:\.\d+)?_(.+)$",
+    expand=False
+)
+
+print("\nGene identifier check:")
+print("Total gene rows:", len(third_ids))
+print("Valid identifiers:", third_symbols.notna().sum())
+print("Duplicate symbols:", third_symbols.dropna().duplicated().sum())
+
+print(
+    "Shared genes with dataset 1:",
+    len(set(third_symbols.dropna()) & first_dataset_genes)
+)
+
+# Examine expression scale
+hcc827_values = third_df[hcc827_columns].apply(
+    pd.to_numeric,
+    errors="coerce"
+)
+
+print("\nExpression value check:")
+print("Missing values:", hcc827_values.isna().sum().sum())
+print("Minimum:", hcc827_values.min().min())
+print("Maximum:", hcc827_values.max().max())
+print("Median:", hcc827_values.stack().median())
+print("Negative values:", (hcc827_values < 0).sum().sum())

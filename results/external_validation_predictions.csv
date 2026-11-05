@@ -1,0 +1,19 @@
+method,sample_id,actual,predicted
+Rank + PCA,HCC827Untreated1,DMSO,DMSO
+Rank + PCA,HCC827Untreated2,DMSO,DMSO
+Rank + PCA,HCC827Untreated3,DMSO,DMSO
+Rank + PCA,HCC827Osimertinib11d1,osi_DTP,DMSO
+Rank + PCA,HCC827Osimertinib11d2,osi_DTP,DMSO
+Rank + PCA,HCC827Osimertinib11d3,osi_DTP,DMSO
+Pooled Effect,HCC827Untreated1,DMSO,DMSO
+Pooled Effect,HCC827Untreated2,DMSO,DMSO
+Pooled Effect,HCC827Untreated3,DMSO,DMSO
+Pooled Effect,HCC827Osimertinib11d1,osi_DTP,osi_DTP
+Pooled Effect,HCC827Osimertinib11d2,osi_DTP,osi_DTP
+Pooled Effect,HCC827Osimertinib11d3,osi_DTP,osi_DTP
+Stable Signature,HCC827Untreated1,DMSO,DMSO
+Stable Signature,HCC827Untreated2,DMSO,DMSO
+Stable Signature,HCC827Untreated3,DMSO,DMSO
+Stable Signature,HCC827Osimertinib11d1,osi_DTP,osi_DTP
+Stable Signature,HCC827Osimertinib11d2,osi_DTP,osi_DTP
+Stable Signature,HCC827Osimertinib11d3,osi_DTP,osi_DTP

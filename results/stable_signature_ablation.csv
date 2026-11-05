@@ -1,0 +1,13 @@
+method,test_cell_line,accuracy,macro_f1
+Stable Signature,H1975,1.0,1.0
+Pooled Effect,H1975,1.0,1.0
+Random Genes,H1975,0.8333333333333334,0.8285714285714285
+Stable Signature,HCC2935,1.0,1.0
+Pooled Effect,HCC2935,1.0,1.0
+Random Genes,HCC2935,0.8333333333333334,0.8285714285714285
+Stable Signature,HCC827,1.0,1.0
+Pooled Effect,HCC827,1.0,1.0
+Random Genes,HCC827,0.6666666666666666,0.625
+Stable Signature,PC9,1.0,1.0
+Pooled Effect,PC9,0.5,0.3333333333333333
+Random Genes,PC9,0.8333333333333334,0.8285714285714285

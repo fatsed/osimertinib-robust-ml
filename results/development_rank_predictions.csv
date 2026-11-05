@@ -1,0 +1,13 @@
+method,sample_id,actual,predicted
+Raw Expression,GSM8083374,DMSO,DMSO
+Raw Expression,GSM8083375,DMSO,DMSO
+Raw Expression,GSM8083376,DMSO,DMSO
+Raw Expression,GSM8083380,osi_DTP,DMSO
+Raw Expression,GSM8083381,osi_DTP,DMSO
+Raw Expression,GSM8083382,osi_DTP,DMSO
+Sample Rank,GSM8083374,DMSO,DMSO
+Sample Rank,GSM8083375,DMSO,DMSO
+Sample Rank,GSM8083376,DMSO,DMSO
+Sample Rank,GSM8083380,osi_DTP,DMSO
+Sample Rank,GSM8083381,osi_DTP,DMSO
+Sample Rank,GSM8083382,osi_DTP,DMSO
