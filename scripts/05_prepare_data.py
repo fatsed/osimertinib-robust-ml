@@ -287,3 +287,77 @@ print("\nSamples per condition:")
 print(third_metadata["condition"].value_counts())
 
 print("\nOriginal-scale data saved successfully.")
+
+# Prepare GSE285632: Parental vs DTP
+
+fourth_path = (
+    project_dir
+    / "data"
+    / "raw"
+    / "GSE285632_All.DEG.Expression.xlsx"
+)
+
+fourth_df = pd.read_excel(
+    fourth_path,
+    sheet_name="mRNA",
+    header=1
+)
+
+fourth_df.columns = fourth_df.columns.str.strip()
+
+sample_columns = [
+    "P1", "P2", "P3",
+    "D1", "D2", "D3"
+]
+
+# Validate gene identifiers
+if fourth_df["gene_id"].isna().any():
+    raise ValueError("Missing gene identifiers.")
+
+if fourth_df["gene_id"].duplicated().any():
+    raise ValueError("Duplicated gene identifiers.")
+
+# Build sample-by-gene matrix
+fourth_expression = (
+    fourth_df.set_index("gene_id")[sample_columns]
+    .apply(pd.to_numeric, errors="raise")
+    .T
+)
+
+fourth_expression.index.name = "sample_id"
+
+if not np.isfinite(fourth_expression.to_numpy()).all():
+    raise ValueError("Invalid expression values.")
+
+# Preserve original values without extra transformations
+fourth_metadata = pd.DataFrame({
+    "sample_id": sample_columns,
+    "study": "GSE285632",
+    "cell_line": "HCC827",
+    "original_condition": ["Parental"] * 3 + ["DTP"] * 3,
+    "condition": ["control"] * 3 + ["osi_DTP"] * 3
+})
+
+fourth_expression.to_csv(
+    output_dir / "GSE285632_expression.csv.gz",
+    compression="gzip"
+)
+
+fourth_metadata.to_csv(
+    output_dir / "GSE285632_metadata.csv",
+    index=False
+)
+
+shared_fourth = (
+    set(first_genes) & set(fourth_expression.columns)
+)
+
+print("\nGSE285632 preparation completed")
+print("Matrix shape:", fourth_expression.shape)
+print("Shared genes:", len(shared_fourth))
+print("Missing values:", fourth_expression.isna().sum().sum())
+
+print("\nConditions:")
+print(fourth_metadata["condition"].value_counts())
+
+print("\nProcessed files saved successfully.")

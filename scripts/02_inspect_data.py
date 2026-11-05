@@ -328,3 +328,87 @@ print("Minimum:", hcc827_values.min().min())
 print("Maximum:", hcc827_values.max().max())
 print("Median:", hcc827_values.stack().median())
 print("Negative values:", (hcc827_values < 0).sum().sum())
+
+# Dataset 4: GSE285632
+
+fourth_dataset_path = (
+    project_dir
+    / "data"
+    / "raw"
+    / "GSE285632_All.DEG.Expression.xlsx"
+)
+
+if not fourth_dataset_path.is_file():
+    raise FileNotFoundError(
+        f"Dataset not found: {fourth_dataset_path}"
+    )
+
+print("\nDataset 4: GSE285632")
+
+with pd.ExcelFile(fourth_dataset_path) as excel:
+    print("\nSheet names:", excel.sheet_names)
+
+    for sheet_name in excel.sheet_names:
+        preview = pd.read_excel(
+            excel,
+            sheet_name=sheet_name,
+            nrows=5
+        )
+
+        print(f"\nSheet: {sheet_name}")
+        print("Number of columns:", len(preview.columns))
+        print("First 15 columns:")
+        print(preview.columns.tolist()[:15])
+
+        print("\nFirst five rows:")
+        print(
+            preview.iloc[:, :8].to_string(index=False)
+        )
+
+# Dataset 4: Detailed mRNA inspection
+
+mrna_df = pd.read_excel(
+    fourth_dataset_path,
+    sheet_name="mRNA",
+    header=1
+)
+
+mrna_df.columns = (
+    mrna_df.columns.astype(str).str.strip()
+)
+
+print("\nGSE285632 mRNA inspection:")
+print("Matrix shape:", mrna_df.shape)
+print("Columns:", mrna_df.columns.tolist())
+
+# Check gene identifiers
+gene_ids = mrna_df["gene_id"].dropna().astype(str)
+
+print("\nGene information:")
+print("Total gene rows:", len(gene_ids))
+print("Duplicate gene IDs:", gene_ids.duplicated().sum())
+
+print(
+    "Shared genes with dataset 1:",
+    len(set(gene_ids) & first_dataset_genes)
+)
+
+# Check expression values
+sample_columns = ["P1", "P2", "P3", "D1", "D2", "D3"]
+
+expression_values = mrna_df[
+    sample_columns
+].apply(pd.to_numeric, errors="coerce")
+
+print("\nExpression information:")
+print("Missing values:", expression_values.isna().sum().sum())
+print("Minimum:", expression_values.min().min())
+print("Maximum:", expression_values.max().max())
+print("Median:", expression_values.stack().median())
+
+print("\nFirst five rows:")
+print(
+    mrna_df[["gene_id"] + sample_columns]
+    .head()
+    .to_string(index=False)
+)
