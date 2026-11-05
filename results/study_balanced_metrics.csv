@@ -1,0 +1,10 @@
+test_study,method,n_test,accuracy,macro_f1,dtp_recall
+GSE193258,Pooled Effect,24,1.0,1.0,1.0
+GSE193258,Study Balanced,24,1.0,1.0,1.0
+GSE193258,Balanced + Penalty,24,1.0,1.0,1.0
+GSE249721,Pooled Effect,6,1.0,1.0,1.0
+GSE249721,Study Balanced,6,1.0,1.0,1.0
+GSE249721,Balanced + Penalty,6,1.0,1.0,1.0
+GSE255958,Pooled Effect,6,1.0,1.0,1.0
+GSE255958,Study Balanced,6,1.0,1.0,1.0
+GSE255958,Balanced + Penalty,6,1.0,1.0,1.0

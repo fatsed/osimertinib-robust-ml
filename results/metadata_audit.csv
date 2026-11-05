@@ -1,0 +1,43 @@
+study,sample_id,gsm,cell_line,original_condition,analysis_label,control_type,drug,osimertinib_exposure_days,control_exposure_hours,expression_scale,verification_status,primary_analysis_eligible,exclusion_reason
+GSE193258,HCC2935_DMSO_1,GSM5778011,HCC2935,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC2935_DMSO_2,GSM5778012,HCC2935,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC2935_DMSO_3,GSM5778013,HCC2935,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC2935_osi_DTP_1,GSM5778020,HCC2935,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC2935_osi_DTP_2,GSM5778021,HCC2935,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC2935_osi_DTP_3,GSM5778022,HCC2935,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC827_DMSO_1,GSM5778026,HCC827,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC827_DMSO_2,GSM5778027,HCC827,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC827_DMSO_3,GSM5778028,HCC827,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC827_osi_DTP_1,GSM5778035,HCC827,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC827_osi_DTP_2,GSM5778036,HCC827,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,HCC827_osi_DTP_3,GSM5778037,HCC827,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,H1975_DMSO_1,GSM5777996,H1975,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,H1975_DMSO_2,GSM5777997,H1975,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,H1975_DMSO_3,GSM5777998,H1975,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,H1975_osi_DTP_1,GSM5778005,H1975,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,H1975_osi_DTP_2,GSM5778006,H1975,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,H1975_osi_DTP_3,GSM5778007,H1975,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,PC9_DMSO_1,GSM5778041,PC9,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,PC9_DMSO_2,GSM5778042,PC9,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,PC9_DMSO_3,GSM5778043,PC9,DMSO,Control,DMSO,osimertinib,0.0,24.0,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,PC9_osi_DTP_1,GSM5778050,PC9,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,PC9_osi_DTP_2,GSM5778051,PC9,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE193258,PC9_osi_DTP_3,GSM5778052,PC9,osi_DTP,DTP,,osimertinib,21.0,,log2(TPM+0.01),GEO sample title verified,True,
+GSE255958,GSM8083374,GSM8083374,PC9,ctrl_48h,Control,DMSO,osimertinib,0.0,48.0,log2(TPM+0.01),GEO sample ID verified,True,
+GSE255958,GSM8083375,GSM8083375,PC9,ctrl_48h,Control,DMSO,osimertinib,0.0,48.0,log2(TPM+0.01),GEO sample ID verified,True,
+GSE255958,GSM8083376,GSM8083376,PC9,ctrl_48h,Control,DMSO,osimertinib,0.0,48.0,log2(TPM+0.01),GEO sample ID verified,True,
+GSE255958,GSM8083380,GSM8083380,PC9,Osim_9d,DTP,,osimertinib,9.0,,log2(TPM+0.01),GEO sample ID verified,True,
+GSE255958,GSM8083381,GSM8083381,PC9,Osim_9d,DTP,,osimertinib,9.0,,log2(TPM+0.01),GEO sample ID verified,True,
+GSE255958,GSM8083382,GSM8083382,PC9,Osim_9d,DTP,,osimertinib,9.0,,log2(TPM+0.01),GEO sample ID verified,True,
+GSE249721,HCC827Untreated1,GSM7961985,HCC827,Untreated,Control,DMSO (series design; sample named Untreated),osimertinib,0.0,,processed scale not verified,GEO sample ID verified,True,
+GSE249721,HCC827Untreated2,GSM7961986,HCC827,Untreated,Control,DMSO (series design; sample named Untreated),osimertinib,0.0,,processed scale not verified,GEO sample ID verified,True,
+GSE249721,HCC827Untreated3,GSM7961987,HCC827,Untreated,Control,DMSO (series design; sample named Untreated),osimertinib,0.0,,processed scale not verified,GEO sample ID verified,True,
+GSE249721,HCC827Osimertinib11d1,GSM7961982,HCC827,Osimertinib11d,DTP,,osimertinib,11.0,,processed scale not verified,GEO sample ID verified,True,
+GSE249721,HCC827Osimertinib11d2,GSM7961983,HCC827,Osimertinib11d,DTP,,osimertinib,11.0,,processed scale not verified,GEO sample ID verified,True,
+GSE249721,HCC827Osimertinib11d3,GSM7961984,HCC827,Osimertinib11d,DTP,,osimertinib,11.0,,processed scale not verified,GEO sample ID verified,True,
+GSE285632,P1,,HCC827,Parental,Control,Parental,osimertinib,,,Excel scale not verified,P/D to GSM mapping NOT verified,False,P/D sample-to-GSM mapping not verified
+GSE285632,P2,,HCC827,Parental,Control,Parental,osimertinib,,,Excel scale not verified,P/D to GSM mapping NOT verified,False,P/D sample-to-GSM mapping not verified
+GSE285632,P3,,HCC827,Parental,Control,Parental,osimertinib,,,Excel scale not verified,P/D to GSM mapping NOT verified,False,P/D sample-to-GSM mapping not verified
+GSE285632,D1,,HCC827,DTP,DTP,,osimertinib,,,Excel scale not verified,P/D to GSM mapping NOT verified,False,P/D sample-to-GSM mapping not verified
+GSE285632,D2,,HCC827,DTP,DTP,,osimertinib,,,Excel scale not verified,P/D to GSM mapping NOT verified,False,P/D sample-to-GSM mapping not verified
+GSE285632,D3,,HCC827,DTP,DTP,,osimertinib,,,Excel scale not verified,P/D to GSM mapping NOT verified,False,P/D sample-to-GSM mapping not verified

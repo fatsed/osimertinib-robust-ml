@@ -1,0 +1,46 @@
+test_study,method,n_genes,n_test,accuracy,macro_f1,dtp_recall
+GSE193258,Pooled Effect,5,24,0.8333333333333334,0.8285714285714285,1.0
+GSE193258,Study Balanced,5,24,0.8333333333333334,0.8285714285714285,1.0
+GSE193258,Balanced + Penalty,5,24,1.0,1.0,1.0
+GSE193258,Pooled Effect,10,24,1.0,1.0,1.0
+GSE193258,Study Balanced,10,24,1.0,1.0,1.0
+GSE193258,Balanced + Penalty,10,24,1.0,1.0,1.0
+GSE193258,Pooled Effect,20,24,1.0,1.0,1.0
+GSE193258,Study Balanced,20,24,1.0,1.0,1.0
+GSE193258,Balanced + Penalty,20,24,1.0,1.0,1.0
+GSE193258,Pooled Effect,50,24,1.0,1.0,1.0
+GSE193258,Study Balanced,50,24,1.0,1.0,1.0
+GSE193258,Balanced + Penalty,50,24,1.0,1.0,1.0
+GSE193258,Pooled Effect,100,24,1.0,1.0,1.0
+GSE193258,Study Balanced,100,24,1.0,1.0,1.0
+GSE193258,Balanced + Penalty,100,24,1.0,1.0,1.0
+GSE249721,Pooled Effect,5,6,1.0,1.0,1.0
+GSE249721,Study Balanced,5,6,1.0,1.0,1.0
+GSE249721,Balanced + Penalty,5,6,1.0,1.0,1.0
+GSE249721,Pooled Effect,10,6,1.0,1.0,1.0
+GSE249721,Study Balanced,10,6,1.0,1.0,1.0
+GSE249721,Balanced + Penalty,10,6,1.0,1.0,1.0
+GSE249721,Pooled Effect,20,6,1.0,1.0,1.0
+GSE249721,Study Balanced,20,6,1.0,1.0,1.0
+GSE249721,Balanced + Penalty,20,6,1.0,1.0,1.0
+GSE249721,Pooled Effect,50,6,1.0,1.0,1.0
+GSE249721,Study Balanced,50,6,1.0,1.0,1.0
+GSE249721,Balanced + Penalty,50,6,1.0,1.0,1.0
+GSE249721,Pooled Effect,100,6,1.0,1.0,1.0
+GSE249721,Study Balanced,100,6,1.0,1.0,1.0
+GSE249721,Balanced + Penalty,100,6,1.0,1.0,1.0
+GSE255958,Pooled Effect,5,6,0.5,0.3333333333333333,0.0
+GSE255958,Study Balanced,5,6,0.5,0.3333333333333333,0.0
+GSE255958,Balanced + Penalty,5,6,0.5,0.3333333333333333,0.0
+GSE255958,Pooled Effect,10,6,0.5,0.3333333333333333,0.0
+GSE255958,Study Balanced,10,6,0.5,0.3333333333333333,0.0
+GSE255958,Balanced + Penalty,10,6,0.5,0.3333333333333333,0.0
+GSE255958,Pooled Effect,20,6,1.0,1.0,1.0
+GSE255958,Study Balanced,20,6,0.5,0.3333333333333333,0.0
+GSE255958,Balanced + Penalty,20,6,0.5,0.3333333333333333,0.0
+GSE255958,Pooled Effect,50,6,1.0,1.0,1.0
+GSE255958,Study Balanced,50,6,1.0,1.0,1.0
+GSE255958,Balanced + Penalty,50,6,1.0,1.0,1.0
+GSE255958,Pooled Effect,100,6,1.0,1.0,1.0
+GSE255958,Study Balanced,100,6,1.0,1.0,1.0
+GSE255958,Balanced + Penalty,100,6,1.0,1.0,1.0

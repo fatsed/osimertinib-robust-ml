@@ -1,0 +1,16 @@
+n_genes,method,accuracy,macro_f1,dtp_recall
+5,Balanced + Penalty,0.833,0.778,0.667
+5,Pooled Effect,0.778,0.721,0.667
+5,Study Balanced,0.778,0.721,0.667
+10,Balanced + Penalty,0.833,0.778,0.667
+10,Pooled Effect,0.833,0.778,0.667
+10,Study Balanced,0.833,0.778,0.667
+20,Balanced + Penalty,0.833,0.778,0.667
+20,Pooled Effect,1.0,1.0,1.0
+20,Study Balanced,0.833,0.778,0.667
+50,Balanced + Penalty,1.0,1.0,1.0
+50,Pooled Effect,1.0,1.0,1.0
+50,Study Balanced,1.0,1.0,1.0
+100,Balanced + Penalty,1.0,1.0,1.0
+100,Pooled Effect,1.0,1.0,1.0
+100,Study Balanced,1.0,1.0,1.0
