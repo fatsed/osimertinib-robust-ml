@@ -1,0 +1,46 @@
+test_study,method,n_genes,direction_agreement
+GSE193258,Pooled Effect,5,1.0
+GSE193258,Study Balanced,5,1.0
+GSE193258,Balanced + Penalty,5,1.0
+GSE193258,Pooled Effect,10,1.0
+GSE193258,Study Balanced,10,1.0
+GSE193258,Balanced + Penalty,10,1.0
+GSE193258,Pooled Effect,20,1.0
+GSE193258,Study Balanced,20,1.0
+GSE193258,Balanced + Penalty,20,1.0
+GSE193258,Pooled Effect,50,0.96
+GSE193258,Study Balanced,50,0.96
+GSE193258,Balanced + Penalty,50,1.0
+GSE193258,Pooled Effect,100,0.96
+GSE193258,Study Balanced,100,0.96
+GSE193258,Balanced + Penalty,100,0.99
+GSE249721,Pooled Effect,5,1.0
+GSE249721,Study Balanced,5,0.6
+GSE249721,Balanced + Penalty,5,1.0
+GSE249721,Pooled Effect,10,1.0
+GSE249721,Study Balanced,10,0.8
+GSE249721,Balanced + Penalty,10,1.0
+GSE249721,Pooled Effect,20,1.0
+GSE249721,Study Balanced,20,0.8
+GSE249721,Balanced + Penalty,20,1.0
+GSE249721,Pooled Effect,50,0.94
+GSE249721,Study Balanced,50,0.84
+GSE249721,Balanced + Penalty,50,0.98
+GSE249721,Pooled Effect,100,0.92
+GSE249721,Study Balanced,100,0.88
+GSE249721,Balanced + Penalty,100,0.96
+GSE255958,Pooled Effect,5,0.6
+GSE255958,Study Balanced,5,0.6
+GSE255958,Balanced + Penalty,5,0.8
+GSE255958,Pooled Effect,10,0.8
+GSE255958,Study Balanced,10,0.8
+GSE255958,Balanced + Penalty,10,0.7
+GSE255958,Pooled Effect,20,0.8
+GSE255958,Study Balanced,20,0.75
+GSE255958,Balanced + Penalty,20,0.8
+GSE255958,Pooled Effect,50,0.84
+GSE255958,Study Balanced,50,0.74
+GSE255958,Balanced + Penalty,50,0.82
+GSE255958,Pooled Effect,100,0.87
+GSE255958,Study Balanced,100,0.73
+GSE255958,Balanced + Penalty,100,0.82
