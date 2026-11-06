@@ -1,0 +1,5 @@
+study,n_samples,n_genes,n_cell_lines,conditions,missing_values,nonfinite_values,constant_genes,min_expression,max_expression,fraction_at_log2_floor,primary_analysis,known_limitations
+GSE193258,36,19712,4,DMSO:12; osi_DTP:12; osi_acute:12,0,0,769,-6.64385618977472,15.0957147202927,0.1630027958152958,True,Different osimertinib exposure durations across studies
+GSE255958,9,18013,1,DMSO:3; osi_DTP:3; osi_acute:3,0,0,2680,-6.643856189774724,13.788125923189686,0.23945668868779954,True,Different osimertinib exposure durations across studies
+GSE249721,6,34180,1,DMSO:3; osi_DTP:3,0,0,13848,0.0,18.820761317775,,True,Untreated mapped to DMSO; processed scale not verified
+GSE285632,6,57764,1,control:3; osi_DTP:3,0,0,7481,0.0,5.87718699078607,,False,P/D columns to GEO GSM mapping not verified; EXCLUDED

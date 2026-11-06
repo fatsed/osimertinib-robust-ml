@@ -1,0 +1,4 @@
+comparison,study_A,study_B,n_common_genes,pearson,spearman,top50_direction_agreement,note
+PC9 DTP vs acute,GSE193258,GSE255958,18013,0.3320316438909506,0.30409751273479857,0.84,Exploratory; exposure and/or controls differ across studies
+PC9 DTP vs control,GSE193258,GSE255958,18013,0.6356849080734629,0.5724153517393379,0.98,Exploratory; exposure and/or controls differ across studies
+HCC827 DTP vs control,GSE193258,GSE249721,18011,0.28022569093455035,0.22471518963347278,0.92,Exploratory; exposure and/or controls differ across studies
