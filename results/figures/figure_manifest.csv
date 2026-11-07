@@ -1,0 +1,11 @@
+figure,status,notes
+fig01,created,Primary dataset composition only; GSE285632 intentionally excluded.
+fig02,created,"Earlier three-state cross-study development comparison, only nine test samples."
+fig03,created,Internal LOCO experiment; each held-out cell line has nine samples.
+fig04,created,Development-stage LOSO; high scores do not resolve treatment-duration and study confounding.
+fig05,created,Within-study LOCO; external development cohort intentionally not included.
+fig06,created,"Training-set diagnostic, NOT independent generalization performance."
+fig07,created,"Independent replicate splits (2+2 train, 1+1 held out); not a classification accuracy."
+fig08,created,Descriptive only; between-study exposure and control protocols may differ.
+fig09,created,Three eligible studies only; mean over held-out-study folds.
+fig10,created,Exploratory permutation diagnostic; does not remove underlying study confounding.

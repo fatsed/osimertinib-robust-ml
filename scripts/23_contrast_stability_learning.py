@@ -1,16 +1,3 @@
-"""Exploratory, training-only contrast-stability regularization.
-
-Binary task: Acute vs DTP. Fixed comparison on the SAME pooled-contrast-selected
-20/50 genes. Method is a research hypothesis, NOT a validated novel algorithm.
-
-Objective: mean logistic loss + ridge*||w||^2/2
-           + lambda*Var_cell_line(w^T(mean_DTP - mean_Acute)).
-
-Evaluation: leave-one-cell-line-out in GSE193258, and a separate previously
-seen external-development study (GSE255958 PC9, without PC9 in training).
-
-No tuning against held-out labels, no target samples used to fit preprocessing.
-"""
 from pathlib import Path
 
 import numpy as np
